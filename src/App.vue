@@ -1,6 +1,10 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="Vue logo" src="https://raw.githubusercontent.com/4NUBlS/4NUBlS/master/assets/avatar_1.png" height="240" width="240">
+  <HelloWorld msg="Welcome" name="4NUB!S"/>
+  <button @click="counter += 1">Add 1</button>
+  <p>The button above has been clicked {{ counter }} times.</p>
+  <input v-model="message" placeholder="enter">
+  <p>Message is: {{ message }}</p>
 </template>
 
 <script>
@@ -10,6 +14,12 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  data() {
+    return {
+      counter: 0,
+      message: ''
+    }
   }
 }
 </script>
