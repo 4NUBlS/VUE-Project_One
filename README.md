@@ -1,4 +1,4 @@
-# pjvue01
+# VUE-Project_One
 
 ## Project setup
 ```
