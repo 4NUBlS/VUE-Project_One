@@ -1,27 +1,42 @@
 <template>
-  <img alt="Vue logo" src="https://raw.githubusercontent.com/4NUBlS/4NUBlS/master/assets/avatar_1.png" height="240" width="240">
-  <HelloWorld msg="Welcome" name="4NUB!S"/>
+  <img
+    alt="Vue logo"
+    src="https://raw.githubusercontent.com/4NUBlS/4NUBlS/master/assets/avatar_1.png"
+    height="240"
+    width="240"
+  />
+  <HelloWorld msg="Welcome" name="4NUB!S" />
   <button @click="counter += 1">Add 1</button>
   <p>The button above has been clicked {{ counter }} times.</p>
-  <input v-model="message" placeholder="enter">
+  <input v-model="message" placeholder="enter" />
   <p>Message is: {{ message }}</p>
+  <div>
+    <nav>
+      <li><router-link to="/">Home</router-link></li>
+      <li><router-link to="/student">Home Style 2</router-link></li>
+      <li><router-link to="/add">Create</router-link></li>
+    </nav>
+  </div>
+  <div class="container mt-3">
+    <router-view />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    HelloWorld,
   },
   data() {
     return {
       counter: 0,
-      message: ''
-    }
-  }
-}
+      message: "",
+    };
+  },
+};
 </script>
 
 <style>
